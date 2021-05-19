@@ -1,0 +1,7 @@
+services: 
+  mongo: 
+    image: "mongo:3.6"
+  node:
+    image: "node:12.22"
+    ports: 
+      - "4000:4000"
