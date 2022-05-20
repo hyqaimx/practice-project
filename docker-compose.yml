@@ -1,7 +1,11 @@
 services: 
   mongo: 
+    container_name: mongo
     image: "mongo:3.6"
-  node:
-    image: "node:12.22"
+    volumes:
+      - "./data/configdb:/data/configdb"
+      - "./data/db:/data/db"
     ports: 
-      - "4000:4000"
+      - "27017:27017"
+networks: 
+  yapi:
